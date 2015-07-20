@@ -119,7 +119,7 @@
 
 - (void)saveImage:(UIImage *)image resultBlock:(TGAssetsResultCompletion)resultBlock failureBlock:(TGAssetsFailureCompletion)failureBlock;
 {
-    NSString *appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleNameKey];
+    NSString *appName = [[[NSBundle bundleForClass: [TGAssetsLibrary class]] infoDictionary] objectForKey:(NSString*)kCFBundleNameKey];
     [self saveImage:image withAlbumName:appName resultBlock:resultBlock failureBlock:failureBlock];
 }
 
